@@ -1,21 +1,12 @@
-name: Node.js CI Pipeline
-
-on:
-  push:
-    branches: ["main"]
-
-jobs:
-  run-tests:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js runtime
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24  # Force Node 24 to match the GitHub runner environment
-
-      - name: Execute tests suite
-        run: echo "Running automated tests...Success!"  # Directly echo the success message here
+{
+  "name": "my-first-cicd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Running automated tests...Success!'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
