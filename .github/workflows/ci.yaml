@@ -1,0 +1,23 @@
+name: Node.js CI Pipeline
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Execute tests suite
+        run: npm test
